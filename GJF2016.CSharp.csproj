@@ -76,7 +76,10 @@
     <Compile Include="Assets\EnergyBarBack.cs" />
     <Compile Include="Assets\FlipFunction.cs" />
     <Compile Include="Assets\FollowPlayer.cs" />
+<<<<<<< HEAD
+=======
     <Compile Include="Assets\Oneway.cs" />
+>>>>>>> master
     <Compile Include="Assets\PlayerAnimationController.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\powerup.cs" />

@@ -48,7 +48,27 @@ public class PlayerChar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         if (end)
+=======
+<<<<<<< HEAD
+        rb.velocity = new Vector2(3 + energyLevel / 3.0f, rb.velocity.y);
+=======
+        rb.velocity = new Vector2(2 + energyLevel/4.0f, rb.velocity.y);
+>>>>>>> master
+        pAnim.isJumping = isJumping;
+        pAnim.isDucking = isDucking;
+
+        /* if (!isDucking)
+         {
+             if (Input.GetKeyDown("space"))
+             {
+                 //energyLevel -= 0.5F;
+             }
+         }*/
+
+        if (energyBar.transform.localScale.y > 0)
+>>>>>>> f6c4fb6743dc8d96b4c2a07faa0d1bf6358966a9
         {
             isDucking = true;
             GetComponent<Animator>().SetBool("isDucking", true);
@@ -139,8 +159,11 @@ public class PlayerChar : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> master
      void Jump()
     {
         isDucking = false;

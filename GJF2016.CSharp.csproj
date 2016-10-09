@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\Oneway.cs" />
     <Compile Include="Assets\Scripts\BackgroundController.cs" />
     <Compile Include="Assets\Scripts\Bullet_Script.cs" />
@@ -75,6 +76,26 @@
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\ObjHurts.cs" />
     <Compile Include="Assets\Scripts\PC script.cs" />
+=======
+    <Compile Include="Assets\Alex\Scripts\Bullet_Script.cs" />
+    <Compile Include="Assets\Alex\Scripts\Enemy_Script.cs" />
+    <Compile Include="Assets\Alex\Scripts\Flying_Enemy_Script.cs" />
+    <Compile Include="Assets\Alex\Scripts\Shooting_Script.cs" />
+    <Compile Include="Assets\BackgroundController.cs" />
+    <Compile Include="Assets\Dan\ObjHurts.cs" />
+    <Compile Include="Assets\Dan\PC script.cs" />
+    <Compile Include="Assets\Dan\PlayerChar.cs" />
+    <Compile Include="Assets\Dan\realJump.cs" />
+    <Compile Include="Assets\EnergyBar.cs" />
+    <Compile Include="Assets\EnergyBarBack.cs" />
+    <Compile Include="Assets\FlipFunction.cs" />
+    <Compile Include="Assets\FollowPlayer.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Oneway.cs" />
+>>>>>>> master
+    <Compile Include="Assets\PlayerAnimationController.cs" />
+>>>>>>> f6c4fb6743dc8d96b4c2a07faa0d1bf6358966a9
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimationController.cs" />
     <Compile Include="Assets\Scripts\PlayerChar.cs" />

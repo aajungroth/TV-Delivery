@@ -1,0 +1,277 @@
+fileFormatVersion: 2
+guid: 16ec8059c93a1104a9c297a87f070b7c
+timeCreated: 1475971442
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Kitchen_0
+    21300002: Kitchen_1
+    21300004: Kitchen_2
+    21300006: Kitchen_3
+    21300008: Kitchen_4
+    21300010: Kitchen_5
+    21300012: Kitchen_6
+    21300014: Kitchen_7
+    21300016: Kitchen_8
+    21300018: Kitchen_9
+    21300020: Kitchen_10
+    21300022: Kitchen_11
+    21300024: Kitchen_12
+    21300026: Kitchen_13
+    21300028: Kitchen_14
+    21300030: Kitchen_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Kitchen_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 163
+        width: 61
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: 16.5}
+        - {x: -30.5, y: -16.5}
+        - {x: 30.5, y: -16.5}
+        - {x: 30.5, y: 16.5}
+    - name: Kitchen_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 163
+        width: 61
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: 16.5}
+        - {x: -30.5, y: -16.5}
+        - {x: 30.5, y: -16.5}
+        - {x: 30.5, y: 16.5}
+    - name: Kitchen_2
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 141
+        width: 24
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kitchen_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 124
+        width: 61
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: 16.5}
+        - {x: -30.5, y: -16.5}
+        - {x: 30.5, y: -16.5}
+        - {x: 30.5, y: 16.5}
+    - name: Kitchen_4
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 124
+        width: 61
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: 16.5}
+        - {x: -30.5, y: -16.5}
+        - {x: 30.5, y: -16.5}
+        - {x: 30.5, y: 16.5}
+    - name: Kitchen_5
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 72
+        width: 33
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 30}
+        - {x: -16.5, y: -30}
+        - {x: 16.5, y: -30}
+        - {x: 16.5, y: 30}
+    - name: Kitchen_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 85
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: 16.5}
+        - {x: -19.5, y: -16.5}
+        - {x: 19.5, y: -16.5}
+        - {x: 19.5, y: 16.5}
+    - name: Kitchen_7
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 96
+        width: 17
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kitchen_8
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 96
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kitchen_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kitchen_10
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 96
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kitchen_11
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 80
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kitchen_12
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 80
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kitchen_13
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 80
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kitchen_14
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 80
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Kitchen_15
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 8
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

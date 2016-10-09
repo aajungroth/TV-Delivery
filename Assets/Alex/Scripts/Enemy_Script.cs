@@ -42,7 +42,7 @@ public class Enemy_Script : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D collider)
     {
         //Only marks the enemy as hit if it collides with a bullet (AAJ)
-        if (collider.gameObject.tag == "Bullet")
+        if((collider.gameObject.tag == "Bullet") || (collider.gameObject.tag == "Player"))
         {
             //Increases the enemies gravity (AAJ)
             this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 2;

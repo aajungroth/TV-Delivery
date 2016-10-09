@@ -45,7 +45,7 @@ public class PlayerChar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(3 + energyLevel / 3.0f, rb.velocity.y);
+        rb.velocity = new Vector2(2 + energyLevel/4.0f, rb.velocity.y);
         pAnim.isJumping = isJumping;
         pAnim.isDucking = isDucking;
 
@@ -118,6 +118,8 @@ public class PlayerChar : MonoBehaviour
             isJumping = false;
         }
     }
+
+
 
      void Jump()
     {

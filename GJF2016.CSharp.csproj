@@ -76,6 +76,7 @@
     <Compile Include="Assets\EnergyBarBack.cs" />
     <Compile Include="Assets\FlipFunction.cs" />
     <Compile Include="Assets\FollowPlayer.cs" />
+    <Compile Include="Assets\Oneway.cs" />
     <Compile Include="Assets\PlayerAnimationController.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\powerup.cs" />

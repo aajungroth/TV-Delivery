@@ -76,7 +76,7 @@ public class Flying_Enemy_Script : MonoBehaviour {
         Vector2 tempVector = this.gameObject.GetComponent<ConstantForce2D>().relativeForce;
 
         //Only marks the flying enemy as hit if it collides with a bullet (AAJ)
-        if (collider.gameObject.tag == "Bullet")
+        if ((collider.gameObject.tag == "Bullet") || (collider.gameObject.tag == "Player"))
         {
             //Marks the enemy as hit (AAJ)
             isHit = true;

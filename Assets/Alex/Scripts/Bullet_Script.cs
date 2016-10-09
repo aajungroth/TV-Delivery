@@ -11,7 +11,7 @@ public class Bullet_Script : MonoBehaviour {
     public float bulletTimer = 0;
 
     //The time until the bullet disappears (AAJ)
-    public float bulletDecayTime = 5;
+    public float bulletDecayTime = 0.5f;
 
     //Initial time when bullet is spawned (AAJ)
     public float bulletSpawnTime = 0;

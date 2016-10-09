@@ -9,7 +9,7 @@ public class realJump : MonoBehaviour {
 
     public float count = 0;
     Rigidbody2D Player;
-    bool bounce = true;
+    bool isJumping = true;
     // Use this for initialization
     void Start()
     {
@@ -22,7 +22,7 @@ public class realJump : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.Space))
         {     
-           if (bounce)
+           if (isJumping)
             {
                 Player.velocity = new Vector2(Player.velocity.x, 0);
             Player.velocity = Player.velocity + movementDirection * forceMultiplier;

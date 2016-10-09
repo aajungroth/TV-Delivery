@@ -11,7 +11,7 @@ public class Bullet_Script : MonoBehaviour {
     public float bulletTimer = 0;
 
     //The time until the bullet disappears (AAJ)
-    public float bulletDecayTime = 0.5f;
+    public float bulletDecayTime = 2.5f;
 
     //Initial time when bullet is spawned (AAJ)
     public float bulletSpawnTime = 0;
@@ -26,6 +26,7 @@ public class Bullet_Script : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate ()
     {
+        
         //Advances the timer (AAJ)
         bulletTimer = Time.time;
 
@@ -35,6 +36,7 @@ public class Bullet_Script : MonoBehaviour {
             //Destroys the bullet (AAJ)
             Destroy(this.gameObject);
         }//if
+        
 	}
 
     //When the bullet hits an object (AAJ)
@@ -45,6 +47,7 @@ public class Bullet_Script : MonoBehaviour {
         {
             //Stops applying force to the bullet (AAJ)
             this.GetComponent<ConstantForce2D>().force = Vector2.zero;
+            Destroy(this.gameObject);
         }//if
     }//OnTriggerEnter()
 }

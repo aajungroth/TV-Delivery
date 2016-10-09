@@ -6,6 +6,7 @@ public class Shooting_Script : MonoBehaviour {
 
     //The bullet the gun fires (AAJ)
     public GameObject bullet;
+    private GameObject bull;
 
     //The time since the gun fired (AAJ)
     public float reloadTimer = 0.5f;
@@ -43,14 +44,18 @@ public class Shooting_Script : MonoBehaviour {
         //Fires the gun when the space bar is released (AAJ)
         if (Input.GetKeyUp(KeyCode.Space) == true)
         {
-            //Creates a new bullet (AAJ)
-            Instantiate(bullet, transform.position, Quaternion.identity);
+            if (!GetComponentInParent<PlayerChar>().isDucking)
+            {
+                //Creates a new bullet (AAJ)
+                bull = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
+                bull.GetComponent<Rigidbody2D>().velocity = new Vector2(40, 0);
+                //Records when the gun was fired (AAJ)
+                firedTime = Time.time;
 
-            //Records when the gun was fired (AAJ)
-            firedTime = Time.time;
-
-            //Resets the reloadTimer (AAJ)
-            reloadTimer = 0;
+                //Resets the reloadTimer (AAJ)
+                reloadTimer = 0;
+                GetComponentInParent<PlayerChar>().energyLevel -= 0.5f;
+            }
         }//if
     }//Shoot
 }

@@ -9,12 +9,11 @@ public class EnergyBar : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		transform.localScale = new Vector3(3, energyLevel, -1);
-		transform.position = new Vector3 (0, (float)(energyLevel / 20.0), 0);
+		//transform.localScale = new Vector3(3, energyLevel, -1);
+		//transform.position = new Vector3 (0, (float)(energyLevel / 20.0), 0);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
 	}
 }

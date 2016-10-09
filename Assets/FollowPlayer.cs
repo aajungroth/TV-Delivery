@@ -3,12 +3,12 @@ using System.Collections;
 
 public class FollowPlayer : MonoBehaviour {
 
-    private Player player;
+    private PlayerChar player;
     private Vector3 offset; 
 
 	// Use this for initialization
 	void Start () {
-        player = FindObjectOfType<Player>();
+        player = FindObjectOfType<PlayerChar>();
         offset = new Vector3(5, 2.8f, -10);
 	}
 	

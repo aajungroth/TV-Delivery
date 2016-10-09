@@ -10,6 +10,9 @@ public class PlayerChar : MonoBehaviour
     private bool isJumping = false;
     public bool isDucking = false;
 
+    public bool invincible = false;
+    public bool end = false;
+
     private PlayerAnimationController pAnim;
     private BoxCollider2D[] col = new BoxCollider2D[2];
     private BoxCollider2D topBox, botBox;
@@ -45,60 +48,77 @@ public class PlayerChar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(2 + energyLevel/4.0f, rb.velocity.y);
-        pAnim.isJumping = isJumping;
-        pAnim.isDucking = isDucking;
-
-        /* if (!isDucking)
-         {
-             if (Input.GetKeyDown("space"))
-             {
-                 //energyLevel -= 0.5F;
-             }
-         }*/
-
-        if (energyBar.transform.localScale.y > 0)
+        if (end)
         {
-            energyLevel -= 0.02F;
-            energyBar.transform.localScale = new Vector3(3, energyLevel, 0);
-            energyBar.transform.position = energyBar.transform.parent.transform.position + new Vector3(energyLevel / 20.0f - 1.5f, 0, 0);
+            isDucking = true;
+            GetComponent<Animator>().SetBool("isDucking", true);
+            GetComponent<Animator>().SetBool("isJumping", false);
+
+            rb.velocity = Vector2.zero;
         }
+        else if (invincible)
+        {
+            rb.velocity = new Vector2(10, rb.velocity.y);
+        }
+
         else
         {
-            Debug.Log("You're Dead");
-        }
+            rb.velocity = new Vector2(2 + energyLevel / 4.0f, rb.velocity.y);
+            pAnim.isJumping = isJumping;
+            pAnim.isDucking = isDucking;
 
-        energyBar.GetComponent<EnergyBar>().energyLevel = energyLevel;
+            /* if (!isDucking)
+             {
+                 if (Input.GetKeyDown("space"))
+                 {
+                     //energyLevel -= 0.5F;
+                 }
+             }*/
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
-            Jump();
-
-        //ducking
-        if (!isJumping)
-        {
-            if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+            if (energyBar.transform.localScale.y > 0)
             {
-                isDucking = true;
-                if (topBox.enabled)
-                {
-                    transform.position = new Vector2(transform.position.x, transform.position.y + 2 * collOffset);
-                    topBox.enabled = false;
-                    botBox.offset = new Vector2(botBox.offset.x, 0);
-                }
+                energyLevel -= 0.01F;
+                energyBar.transform.localScale = new Vector3(3, energyLevel, 0);
+                energyBar.transform.position = energyBar.transform.parent.transform.position + new Vector3(energyLevel / 20.0f - 1.5f, 0, 0);
             }
             else
             {
-                isDucking = false;
-                if (!topBox.enabled)
-                {
-                    transform.position = new Vector2(transform.position.x, transform.position.y - 2 * collOffset);
-                    topBox.enabled = true;
-                    botBox.offset = new Vector2(botBox.offset.x, collOffset);
-                }
+                if (!invincible)
+                    Debug.Log("You're Dead");
             }
 
-            if (energyLevel > 30)
-                energyLevel = 30;
+            energyBar.GetComponent<EnergyBar>().energyLevel = energyLevel;
+
+            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+                Jump();
+
+            //ducking
+            if (!isJumping)
+            {
+                if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+                {
+                    isDucking = true;
+                    if (topBox.enabled)
+                    {
+                        transform.position = new Vector2(transform.position.x, transform.position.y + 2 * collOffset);
+                        topBox.enabled = false;
+                        botBox.offset = new Vector2(botBox.offset.x, 0);
+                    }
+                }
+                else
+                {
+                    isDucking = false;
+                    if (!topBox.enabled)
+                    {
+                        transform.position = new Vector2(transform.position.x, transform.position.y - 2 * collOffset);
+                        topBox.enabled = true;
+                        botBox.offset = new Vector2(botBox.offset.x, collOffset);
+                    }
+                }
+
+                if (energyLevel > 30)
+                    energyLevel = 30;
+            }
         }
     }
 
@@ -107,7 +127,7 @@ public class PlayerChar : MonoBehaviour
         if (coll.gameObject.tag == "ObjectHurts")
         {
             print("collided");
-            energyLevel -= 5;
+            energyLevel -= 2;
 
             //Updates the engery bar (AAJ)
             energyBar.GetComponent<EnergyBar>().energyLevel = energyLevel;

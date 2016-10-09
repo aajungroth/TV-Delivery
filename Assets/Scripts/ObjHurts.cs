@@ -16,7 +16,7 @@ public class ObjHurts : MonoBehaviour {
         if (coll.gameObject.tag == "Player")
         {
             print("collided with player");
-          
+          if(destroyedObj != null)
             Instantiate(destroyedObj, transform.position, transform.rotation);
             Destroy(gameObject);
 

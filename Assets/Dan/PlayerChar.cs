@@ -4,23 +4,39 @@ using System.Collections;
 public class PlayerChar : MonoBehaviour {
 
     
-    public int power = 100;
+    public float energyLevel = 30;
+
+    //The energy bar (AAJ)
+    GameObject energyBar;
 
     //Vector2 movement = new Vector2(0, 0);
     // Use this for initialization
     void Start()
     {
-
+        //Finds the energy bar (AAJ)
+        energyBar = GameObject.FindGameObjectWithTag("EnergyBar");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (power <= 0)
+        if (Input.GetKeyDown("space"))
         {
-
-            print("game over");
+            energyLevel -= 0.5F;
         }
+
+        if (energyBar.transform.localScale.y > 0)
+        {
+            energyLevel -= 0.02F;
+            energyBar.transform.localScale = new Vector3(3, energyLevel, 0);
+            energyBar.transform.position = new Vector3(0, (float)(energyLevel / 20.0), 0);
+        }
+        else {
+             Debug.Log("You're Dead");
+        }
+
+        energyBar.GetComponent<EnergyBar>().energyLevel = energyLevel;
+
     }
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -28,9 +44,10 @@ public class PlayerChar : MonoBehaviour {
         if (coll.gameObject.tag == "ObjectHurts")
         {
             print("collided");
-            power -= 10;
-            print(power);
+            energyLevel -= 10;
 
+            //Updates the engery bar (AAJ)
+            energyBar.GetComponent<EnergyBar>().energyLevel = energyLevel;
         }
     }
 }

@@ -48,27 +48,17 @@ public class PlayerChar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
-        if (end)
-=======
-<<<<<<< HEAD
-        rb.velocity = new Vector2(3 + energyLevel / 3.0f, rb.velocity.y);
-=======
-        rb.velocity = new Vector2(2 + energyLevel/4.0f, rb.velocity.y);
->>>>>>> master
-        pAnim.isJumping = isJumping;
-        pAnim.isDucking = isDucking;
+        if(end)
+        {
+            rb.velocity = new Vector2(3 + energyLevel / 3.0f, rb.velocity.y);
 
-        /* if (!isDucking)
-         {
-             if (Input.GetKeyDown("space"))
-             {
-                 //energyLevel -= 0.5F;
-             }
-         }*/
+            rb.velocity = new Vector2(2 + energyLevel / 4.0f, rb.velocity.y);
+
+            pAnim.isJumping = isJumping;
+            pAnim.isDucking = isDucking;
+        }
 
         if (energyBar.transform.localScale.y > 0)
->>>>>>> f6c4fb6743dc8d96b4c2a07faa0d1bf6358966a9
         {
             isDucking = true;
             GetComponent<Animator>().SetBool("isDucking", true);
@@ -80,20 +70,12 @@ public class PlayerChar : MonoBehaviour
         {
             rb.velocity = new Vector2(10, rb.velocity.y);
         }
-
         else
         {
             rb.velocity = new Vector2(2 + energyLevel / 4.0f, rb.velocity.y);
             pAnim.isJumping = isJumping;
             pAnim.isDucking = isDucking;
-
-            /* if (!isDucking)
-             {
-                 if (Input.GetKeyDown("space"))
-                 {
-                     //energyLevel -= 0.5F;
-                 }
-             }*/
+            
 
             if (energyBar.transform.localScale.y > 0)
             {
@@ -110,10 +92,12 @@ public class PlayerChar : MonoBehaviour
             energyBar.GetComponent<EnergyBar>().energyLevel = energyLevel;
 
             if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+            {
                 Jump();
+            }//if
 
             //ducking
-            if (!isJumping)
+            if(!isJumping)
             {
                 if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
                 {
@@ -123,8 +107,8 @@ public class PlayerChar : MonoBehaviour
                         transform.position = new Vector2(transform.position.x, transform.position.y + 2 * collOffset);
                         topBox.enabled = false;
                         botBox.offset = new Vector2(botBox.offset.x, 0);
-                    }
-                }
+                    }//if
+                }//if
                 else
                 {
                     isDucking = false;
@@ -133,14 +117,16 @@ public class PlayerChar : MonoBehaviour
                         transform.position = new Vector2(transform.position.x, transform.position.y - 2 * collOffset);
                         topBox.enabled = true;
                         botBox.offset = new Vector2(botBox.offset.x, collOffset);
-                    }
-                }
+                    }//if
+                }//else
 
                 if (energyLevel > 30)
+                {
                     energyLevel = 30;
-            }
-        }
-    }
+                }//if
+            }//if
+        }//else
+    }//Update
 
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -159,12 +145,7 @@ public class PlayerChar : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> master
-     void Jump()
+    void Jump()
     {
         isDucking = false;
         if (!isJumping)

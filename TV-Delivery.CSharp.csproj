@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -80,13 +74,11 @@
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\ObjHurts.cs" />
     <Compile Include="Assets\Scripts\Oneway.cs" />
-    <Compile Include="Assets\Scripts\PC script.cs" />
     <Compile Include="Assets\Scripts\PlayScript.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimationController.cs" />
     <Compile Include="Assets\Scripts\PlayerChar.cs" />
     <Compile Include="Assets\Scripts\Shooting_Script.cs" />
-    <Compile Include="Assets\Scripts\ender.cs" />
     <Compile Include="Assets\Scripts\playerinvincible.cs" />
     <Compile Include="Assets\Scripts\powerup.cs" />
     <Compile Include="Assets\Scripts\realJump.cs" />
